@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Guzzle/Client;
+use GuzzleHttp\Client;
 
 class ExampleController extends Controller
 {
@@ -32,6 +32,6 @@ class ExampleController extends Controller
             ]
         ]);
 
-        var_dump($request->getStatusCode(), $request->getBody());
+        return dd($request->getStatusCode(), $request->getBody());
     }
 }
