@@ -32,6 +32,6 @@ class ExampleController extends Controller
             ]
         ]);
 
-        return dd($request->getStatusCode(), $request->getBody());
+        return response()->json(json_decode($request->getBody(), true), $request->getStatusCode());
     }
 }
