@@ -32,6 +32,6 @@ class ExampleController extends Controller
             ]
         ]);
 
-        dd($request->getStatusCode(), $request->getBody());
+        var_dump($request->getStatusCode(), $request->getBody());
     }
 }
