@@ -14,3 +14,7 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+$app->group(['prefix' => 'ppob'], function () use ($app) {
+	$app->get('kelompok', ['uses' => 'ExampleController@ppob_get_kelompok', 'as' => 'ppob.kelompok']);
+});
